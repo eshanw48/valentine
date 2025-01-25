@@ -38,56 +38,33 @@
         .no:hover {
             background-color: #ff6666;
         }
-        /* Heart Animation */
-        .heart {
-            display: none;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 50px;
-            color: red;
-            animation: heartBeat 1s ease-out infinite;
-        }
-
-        @keyframes heartBeat {
-            0% {
-                transform: scale(1) rotate(0deg);
-            }
-            50% {
-                transform: scale(1.2) rotate(45deg);
-            }
-            100% {
-                transform: scale(1) rotate(0deg);
-            }
-        }
     </style>
 </head>
 <body>
 
-    <h1>Will You Be My Valentine Tanu</h1>
+    <h1>Will You Be My Valentine Tanu?</h1>
     
-    <button class="button yes" onclick="showHearts('Yesssssssss!')">Yes</button>
-    <button class="button no" onclick="showHearts('Yes!')">No</button>
+    <button class="button yes" onclick="showResponse('Yes! I would love to!')">Yesssssssss</button>
+    <button class="button no" onclick="showResponse('Yes.')">Yes</button>
 
     <div id="response" style="margin-top: 30px; font-size: 20px;"></div>
-    
-    <!-- Heart animation element -->
-    <div id="heart" class="heart">❤️</div>
+
+    <div id="image-container">
+        <img id="heart-image" src="https://media.giphy.com/media/3o6Zt1T7I21XINaeKo/giphy.gif" alt="Heart Animation">
+    </div>
 
     <script>
-        function showHearts(response) {
-            // Display the response
-            document.getElementById('response').innerText = response;
+        function showResponse(response) {
+            if(response === "Yes"){
+            document.getElementById('response').innerText = "Select Yesssssssss Tanu :)";
 
-            // Show heart animation
-            const heartElement = document.getElementById('heart');
-            heartElement.style.display = 'block';
+            }
 
-            // Hide heart animation after 3 seconds (duration of the animation)
-            setTimeout(() => {
-                heartElement.style.display = 'none';
-            }, 3000);
+            if(response === "Yes! I would love to!"){
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.style.display = 'block';
+
+            }
         }
     </script>
 
