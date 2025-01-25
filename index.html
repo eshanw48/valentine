@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine</title>
+    <style>
+        body {
+            background-color: #ffcccb; /* Soft pink background */
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff66b2;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .yes {
+            background-color: #ff66b2;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #ff3385;
+        }
+        .no {
+            background-color: #ff9999;
+            color: white;
+        }
+        .no:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Be My Valentine Tanu?</h1>
+    
+    <p>Click an option below to respond:</p>
+
+    <button class="button yes" onclick="showResponse('Yes! I would love to!')">Yes</button>
+    <button class="button no" onclick="showResponse('Sorry, maybe next time.')">No</button>
+
+    <div id="response" style="margin-top: 30px; font-size: 20px;"></div>
+
+    <script>
+        function showResponse(response) {
+            document.getElementById('response').innerText = response;
+        }
+    </script>
+
+</body>
+</html>
