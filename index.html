@@ -38,13 +38,9 @@
         .no:hover {
             background-color: #ff6666;
         }
-         #image-container {
+          #image-container {
             margin-top: 30px;
             display: none; /* Hidden initially */
-            justify-content: center; /* Horizontally center */
-            align-items: center; /* Vertically center */
-            height: 300px; /* Set the container height */
-            display: flex; /* Enable flexbox when image is shown */
         }
     </style>
 </head>
@@ -70,7 +66,7 @@
 
             if(response === "Yes! I would love to!"){
             const imageContainer = document.getElementById('image-container');
-                imageContainer.style.display = 'flex'; // Show the image container using flexbox
+            imageContainer.style.display = 'block';
 
             }
         }
